@@ -5,7 +5,6 @@
 }
  body{
     font-family: Arial, sans-serif;
-    height: 1000vh;
 }
 .container{
     max-width: 85%;
@@ -17,4 +16,101 @@ ul{
 }
 a{
     text-decoration: none;
+}
+.navbar{
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.icon{
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.navbar ul {
+    display: flex;
+    gap: 15px;
+}
+.navbar ul li a{
+    color: #fff;
+}
+.navbar ul li a:hover{
+    color: red;
+}
+
+.allmovies .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.allmovies .movie , .recommended .movie{
+    color: #030303;
+    position: relative;
+    border-radius: 10%;
+    background-color: #f1f1f1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.allmovies .movie .text a{
+    color: #0c0c0c;
+    text-decoration: none;
+}
+.allmovies .movie img , .recommended img{
+    width: 100%;
+    height: 500px;
+    border-radius: 10%;
+}
+.allmovies .movie .text , .recommended .text{
+    padding: 10px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.about button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.allmovies .imgandicons{
+    position: relative;
+}
+.allmovies .icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #fff;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.allmovies a{
+    color: #0c0c0c;
+    text-decoration: none;
+}
+.allmovies i{
+    font-size: 25px;
+    margin-right: 10px;
+}
+.mainhead{
+    align-items: center;
+    text-align: center;
+    color: red;
+    padding: 20px;
+    margin: 50px auto;
+    font-size: 45px;
 }
