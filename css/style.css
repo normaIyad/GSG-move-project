@@ -1,0 +1,44 @@
+
+
+.photo img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.allfivarets{
+    margin: 70px 10px;
+}
+.allfivarets h1{
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.favoritesmovies{
+    
+    text-align: left;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+.dis{
+   margin-top:10px;
+}
+
+.dis .title{
+   font-weight: bold;
+   color: black;
+   font-size: 18px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.favoritesList {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    flex-wrap: wrap;
+
+}

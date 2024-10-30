@@ -83,14 +83,16 @@ function displayMovies() {
 
 function addToFavorites(movieName, id, button) {
     let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    if (favorites.includes(movieName)) {
+    if (favorites.some(movie => movie.id === id)) {
         alert(`${movieName} موجود بالفعل في قائمة المفضلات`);
         return;
+    } else {
+        favorites.push({ id: id, movieName: movieName });
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+        alert(`تم إضافة ${movieName} إلى قائمة المفضلات`);
     }
-    favorites.push({ id: id, movieName: movieName });
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-    alert(`تم إضافة ${movieName} إلى قائمة المفضلات`);
 }
+
 function fivarate(icon) {
     if (icon.classList.contains("fa-regular")) {
         icon.classList.remove("fa-regular");
@@ -119,7 +121,6 @@ function updatePagination() {
 document.getElementById("arrow-left").addEventListener("click", () => {
     console.log("arrow-left clicked");
     currentIndex = Math.max(currentIndex - itemsPerPage, 0);
-    // pages[pagesIndex].classList.remove("active");
     pagesIndex--;
     displayMovies();
 });
@@ -129,9 +130,7 @@ document.getElementById("arrow-right").addEventListener("click", () => {
         currentIndex + itemsPerPage,
         movies.length - itemsPerPage
     );
-    // pages[pagesIndex].classList.remove("active");
     pagesIndex++;
-
     displayMovies();
 });
 fetchPopularMovies();
