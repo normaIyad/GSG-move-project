@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/publec.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Favorite Movies</title>
+    <title>Detail Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/publec.css">
+    <link rel="stylesheet" href="./css/detail.css">
 </head>
 <body>
+    <!-- header -->
     <header>
         <section>
             <div class="container">
@@ -17,9 +21,9 @@
                         <h3>STAR CINPLEX</h3>
                     </div>
                     <ul>
-                        <li><a href="../index.html">HOME</a></li>
-                        <li><a href="./fav.html">FAVORITES</a></li>
-                        <li><a href="#">RECOMMENDED</a></li>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./htmlpage/fav.html">FAVORITES</a></li>
+                        <li><a href="./htmlpage/allmovies.html">MOBIES</a></li>
                         <li><a href="#">NEWS</a></li>
                         <li><a href="#">NEWSLETTER</a></li>
                     </ul>
@@ -27,13 +31,19 @@
             </div>
         </section>
     </header>
-    <main class="allfivarets">
-        <h1>Your Favorite Movies</h1>
-            <div class="favoritesmovies"> 
-                <section class="favoritesList" id="favoritesList" > 
+    <main>
 
-                </section> 
+        <section class="details">
+            <div class="details-bg"></div>
+
+            <div class="container">
+                <div id="movie-detail"></div>
+                <div id="reviews">
+                    <h2>Reviews</h2>
+                </div>
             </div>
+        </section>
+
     </main>
     <footer class="footer">
         <div class="container">
@@ -52,7 +62,7 @@
             </div>
         </div>
     </footer>
-      <script src="../favorites.js" defer></script> 
+    <script src="./detail.js"></script>
 </body>
-</html>
 
+</html>

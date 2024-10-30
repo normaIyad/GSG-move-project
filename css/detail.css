@@ -1,0 +1,49 @@
+#movie-detail {
+    margin-top: 100px;
+}
+
+.card {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    margin-bottom: 40px;
+
+}
+
+.card .movie-image img{
+    object-fit: contain;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.movie-content h2{
+    margin-bottom: 20px;
+}
+
+.movie-content ul li{
+    margin-bottom: 20px;
+}
+
+#reviews .review-item{
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #a7a5a5dd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px
+}
+
+#reviews .review-item .user-icon{
+    font-size: 40px;
+    margin-right: 10px;
+    color: #a7a5a5dd;
+}
+#reviews .review-item .review-content p{
+    margin-top: 10px;
+    padding: 10px 0;
+
+}
+a{
+    color: black;
+}

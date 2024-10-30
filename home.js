@@ -66,7 +66,7 @@ function displayMovies() {
                 <div class="about">
                     <div>
                         <h3>${movie.title}</h3>
-                        <a href="#">More Info</a>
+                        <a href="./detail.html?id=${movie.id}">More Info</a>
                     </div>
                     <button onclick="addToFavorites('${movie.title}', ${movie.id}, this); fivarate(this);">
                     <i onclick="fivarate(this)" class="fa-regular fa-heart hart"></i> 
@@ -155,7 +155,7 @@ form.addEventListener("submit", async (event) => {
                 </div>
                 <div class= "text">
                 <h3>${movie.title}</h3>
-                <a href="#">More Info</a>
+                <a href="./detail.html?id=${movie.id}">More Info</a>
                 </div>
             </div>
         `;
@@ -184,11 +184,13 @@ function displayRecomand(popular) {
             return `
             <div class="movie">
                  <div class="imgandicons">
+                  <a href="./detail.html?id=${movie.id}">
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
                 <div class="icon">
                 <i class="fa-solid fa-play"></i>
                 <h3>${movie.vote_average}</h3>
                 </div>
+                </a>
                 </div> 
             </div>
         `;

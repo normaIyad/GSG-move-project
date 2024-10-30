@@ -42,3 +42,7 @@
     flex-wrap: wrap;
 
 }
+a{
+    color: black;
+    text-decoration: none;
+}
